@@ -71,22 +71,38 @@ $(function() {
     //===== Isotope Project 3
 
     $('.container').imagesLoaded(function () {
-        var $grid = $('.grid').isotope({
+        var $grid = $('#about .grid').isotope({
             // options
             transitionDuration: '1s',
             filter: '.about-01'
         });
+        var $grid2 = $('#matriz .grid').isotope({
+            // options
+            transitionDuration: '1s',
+            filter: '.periodo-01'
+        });
 
         // filter items on button click
-        $('.portfolio-menu ul').on('click', 'li', function () {
+        $('#about .portfolio-menu ul').on('click', 'li', function () {
             var filterValue = $(this).attr('data-filter');
             $grid.isotope({
                 filter: filterValue
             });
         });
+        $('#matriz .portfolio-menu ul').on('click', 'li', function () {
+            var filterValue = $(this).attr('data-filter');
+            $grid2.isotope({
+                filter: filterValue
+            });
+        });
 
         //for menu active class
-        $('.portfolio-menu ul li').on('click', function (event) {
+        $('#about .portfolio-menu ul li').on('click', function (event) {
+            $(this).siblings('.active').removeClass('active');
+            $(this).addClass('active');
+            event.preventDefault();
+        });
+        $('#matriz .portfolio-menu ul li').on('click', function (event) {
             $(this).siblings('.active').removeClass('active');
             $(this).addClass('active');
             event.preventDefault();
