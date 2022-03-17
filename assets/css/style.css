@@ -1937,7 +1937,7 @@ p {
   background-color: #fff; }
 
 .single-testimonial {
-  min-height: 507px;
+  min-height: 530px;
   background-color: #fff;
   padding: 30px;
   -webkit-box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.1);
@@ -1945,22 +1945,30 @@ p {
   box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.1); }
   .single-testimonial .testimonial-image img {
     width: 90px;
+    height: 90px;
     border-radius: 50%;
     display: inline-block; }
   .single-testimonial .testimonial-content {
-    padding-top: 25px; }
+    padding-top: 25px;
+    min-height: 380px;
+    }
     .single-testimonial .testimonial-content .text {
       font-size: 16px;
       line-height: 24px;
       color: #121212;
       border-bottom: 1px solid #cbced1;
-      padding-bottom: 24px; }
+      padding-bottom: 24px; 
+      min-height: 230px;
+      }
     .single-testimonial .testimonial-content .author-name {
       font-size: 18px;
       font-weight: 600;
       color: #121212;
-      margin-top: 24px; }
+      margin-top: 24px; 
+      min-height: 50px;
+      }
     .single-testimonial .testimonial-content .sub-title {
+      min-height: 50px;
       font-size: 14px;
       line-height: 24px;
       color: #a4a4a4; }
